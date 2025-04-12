@@ -61,75 +61,115 @@
 <!------ Application -------------------------->
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<h2 id="VideoInput" style="text-align: center;">Video-Input Multiaudio Generation</h2>
-	<p>
-		It is worth mentioning that the goal of face-driven speech synthesis is to generate voice characteristics that matches the face, rather than to synthesize the voice characteristics that is identical to that of the speaker.
-	</p>
+	<br>
+        	<h4 id="emo" style="text-align: center;">Comparison with Other Methods</h4>
+	<br>
 
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2">
 				<thead>
 				<tr>
-					<th style="vertical-align : middle;text-align: center">Text</th>
-					<th style="vertical-align : middle;text-align: center">Face Image</th>
-					<th style="vertical-align : middle;text-align: center">Reference Speech</th>
-					<th style="vertical-align : middle;text-align: center">Baseline</Base></th>
-					<th style="vertical-align : middle;text-align: center">UniSpeaker</Base></th>
+					<th style="vertical-align : middle;text-align: center">Seeing and Hearing</th>
+					<th style="vertical-align : middle;text-align: center">FoleyCrafter</th>
+					<th style="vertical-align : middle;text-align: center">AudioX</th>
+					<th style="vertical-align : middle;text-align: center">Ours (w/o background music)</Base></th>
+					<th style="vertical-align : middle;text-align: center">Ours (w background music)</Base></th>
 				</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>It impacts sentencing. </td>
-						<td style="vertical-align : middle;text-align:center;"><img src="audio/facetts/ClfBxWPkBKU_73.jpg" alt="" width="150" height="150"><br></td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/ClfBxWPkBKU_73_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/ClfBxWPkBKU_73_baseline.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/ClfBxWPkBKU_73.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/name_fire_seed30.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/foleycrafter/fire_foley" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/audiox/fire_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/ours/fire_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/fire_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					</tr>
 					<tr>
-						<td>She found us we found her disease.</td>
-						<td style="vertical-align : middle;text-align:center;"><img src="audio/facetts/gSycQufrgK4_26.jpg" alt="" width="150" height="150"><br></td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/gSycQufrgK4_26_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/gSycQufrgK4_26_baseline.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/gSycQufrgK4_26.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/name_wind_seed30.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/foleycrafter/wind_foley" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/audiox/wind_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/ours/wind_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/wind_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					</tr>
 					<tr>
-						<td>And that's even if you're working way more than full time hours.</td>
-						<td style="vertical-align : middle;text-align:center;"><img src="audio/facetts/JHk9YVjhk7c_12.jpg" alt="" width="200" height="200"></audio><br></td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/JHk9YVjhk7c_12_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/JHk9YVjhk7c_12_baseline.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/JHk9YVjhk7c_12.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/name_grassland_seed30.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/foleycrafter/grassland_foley" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/audiox/grassland_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/ours/grassland_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/grassland_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					</tr>
 					<tr>
-						<td>They were unexpected pleasures.</td>
-						<td style="vertical-align : middle;text-align:center;"><img src="audio/facetts/t7Xr3AsBEK4_17.jpg" alt="" width="150" height="150"><br></td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/t7Xr3AsBEK4_17_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/t7Xr3AsBEK4_17_baseline.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/t7Xr3AsBEK4_17.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/name_flowerbird_seed30.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/foleycrafter/flowerbird_foley" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/audiox/flowerbird_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/ours/flowerbird_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/flowerbird_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					</tr>
 					<tr>
-						<td>Look at the end to see the animal.</td>
-						<td style="vertical-align : middle;text-align:center;"><img src="audio/facetts/4Q2aznfmcYU_50.jpg" alt="" width="150" height="150"><br></td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/4Q2aznfmcYU_50_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/4Q2aznfmcYU_50_baseline.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/4Q2aznfmcYU_50.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/name_train_seed30.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/foleycrafter/train_foley" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/audiox/train_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/ours/train_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/train_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					</tr>
 					<tr>
-						<td>We were so excited.</td>
-						<td style="vertical-align : middle;text-align:center;"><img src="audio/facetts/8vNIrPeRGlM_99.jpg" alt="" width="150" height="150"><br></td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/8vNIrPeRGlM_99_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/8vNIrPeRGlM_99_baseline.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 225px;"><source src="audio/facetts/8vNIrPeRGlM_99.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/name_crashing-waves-ocean_seed30.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td><span style="display: inline-block; width: 200px; text-align: center; line-height: 70px;">- fail -</span></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/audiox/crashing-waves-ocean_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/ours/crashing-waves-ocean_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/crashing-waves-ocean_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					</tr>
+					<<tr>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/seeing/name_washingmachine_seed30.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/foleycrafter/washingmachine_foley" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/audiox/washingmachine_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 200px;"><source src="resources/video-input/ours/washingmachine_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td><span style="display: inline-block; width: 200px; text-align: center; line-height: 70px;">- The script does not contain background planning. -</span></td>
 					</tr>
 				</tbody>
 			</table>
-			<!-- The above real speech samples are sequentially Sample2, Sample1, Sample2, Sample2, Sample1, Sample1. -->
+		</div>
+	<br>
+        	<h4 id="emo" style="text-align: center;">More Results</h4>
+	<br>
+
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+				<thead>
+				<tr>
+					<th style="vertical-align : middle;text-align: center">Ours (w/o background music)</Base></th>
+					<th style="vertical-align : middle;text-align: center">Ours (w background music)</Base></th>
+					<th style="vertical-align : middle;text-align: center">Ours (w/o background music)</Base></th>
+					<th style="vertical-align : middle;text-align: center">Ours (w background music)</Base></th>
+					<th style="vertical-align : middle;text-align: center">Ours (w/o background music)</Base></th>
+					<th style="vertical-align : middle;text-align: center">Ours (w background music)</Base></th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/ours/rockriver_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/seeing/rockriver_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/ours/Street1_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/seeing/Stree1_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/ours/snowhouse_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/seeing/snowhouse_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					</tr>
+					<tr>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/ours/bird_sea_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/seeing/bird_sea_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/ours/horse1_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/seeing/horse_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/ours/Street2_ours_noback.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 166px;"><source src="resources/video-input/seeing/Street2_ours_back.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 </div>
 
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h2 id="TextTTS" style="text-align: center;">Face-Driven Voice Conversion</h2>
+	<h2 id="TextTTS" style="text-align: center;">Text-Input Multiaudio Generation</h2>
 	<p> </p>
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2" style="width: 100%; border-collapse: collapse;">
