@@ -30,6 +30,7 @@
 
         [<a href="">Paper</a>]
         [<a href="">Dataset</a>]
+	[<a href="">Code</a>]
 
         <p class="fst-italic mb-0">
 		<br>
@@ -37,7 +38,7 @@
 		<p></p>
 	</div>
 	<p><b>Abstract:</b>
-	Multimodality-to-Multiaudio (MM2MA) generation faces significant challenges in synthesizing diverse and contextually aligned audio types (e.g., sound effects, speech, music, and songs) from multimodal inputs (e.g., video, text, images), owing to the scarcity of high-quality paired datasets and the lack of robust multi-task learning frameworks. Recently, multi-agent system shows great potential in tackling the above issues. However, directly applying it to MM2MA task presents three critical challenges: (1) inadequate fine-grained understanding of multimodal inputs (especially for video), (2) the inability of single models to handle diverse audio events, and (3) the absence of self-correction mechanisms for reliable outputs. To this end, we propose <b>AudioGenie</b>, a novel training-free multi-agent system featuring a dual-layer architecture with a generation team and a supervisor team. For the generation team, a fine-grained task decomposition and an adaptive Mixture-of-Experts (MoE) collaborative entity are designed for dynamic model selection, and a trial-and-error iterative refinement module is designed for self-correction. The supervisor team ensures temporal-spatial consistency and verifies outputs through feedback loops. Moreover, we build MA-Bench, the first benchmark for MM2MA tasks, comprising 198 annotated videos with multi-type audios. Experiments demonstrate that our AudioGenie outperforms state-of-the-art (SOTA) methods across 12 metrics in 8 tasks. User study further validate the effectiveness of the proposed method in terms of quality, accuracy, alignment, and aesthetic.
+	Multimodality-to-Multiaudio (MM2MA) generation faces significant challenges in synthesizing diverse and contextually aligned audio types (e.g., sound effects, speech, music, and songs) from multimodal inputs (e.g., video, text, images), owing to the scarcity of high-quality paired datasets and the lack of robust multi-task learning frameworks. Recently, multi-agent system shows great potential in tackling the above issues. However, directly applying it to MM2MA task presents three critical challenges: (1) inadequate fine-grained understanding of multimodal inputs (especially for video), (2) the inability of single models to handle diverse audio events, and (3) the absence of self-correction mechanisms for reliable outputs. To this end, we propose <b>AudioGenie</b>, a novel training-free multi-agent system featuring a dual-layer architecture with a generation team and a supervisor team. For the generation team, a fine-grained task decomposition and an adaptive Mixture-of-Experts (MoE) collaborative entity are designed for dynamic model selection, and a trial-and-error iterative refinement module is designed for self-correction. The supervisor team ensures temporal-spatial consistency and verifies outputs through feedback loops. Moreover, we build MA-Bench, the first benchmark for MM2MA tasks, comprising 198 annotated videos with multi-type audios. Experiments demonstrate that our AudioGenie outperforms state-of-the-art (SOTA) methods across 9 metrics in 8 tasks. User study further validate the effectiveness of the proposed method in terms of quality, accuracy, alignment, and aesthetic.
 
 	<p><b>AudioGenie Framework</b></p>
 	<p style="text-align: center;">
@@ -48,11 +49,11 @@
 	<p>
 	<b>Experiment</b>
         <ul>
-      	<li><a href="#VideoInput">Video to Multiaudio Generation</a>
-		<li><a href="#TextInput">Text to Multiaudio Generation</a>
-		<li><a href="#ImageInput">Image to Multiaudio Generation</a>
-		<li><a href="#VTInput">Video+Text to Multiaudio Generation</a>
-		<li><a href="#ITInput">Image+Text to Multiaudio Generation</a>
+      	<li><a href="#VideoInput">Video-to-Multiaudio Generation</a>
+		<li><a href="#TextInput">Text-to-Multiaudio Generation</a>
+		<li><a href="#ImageInput">Image-to-Multiaudio Generation</a>
+		<li><a href="#VTInput">Video+Text-to-Multiaudio Generation</a>
+		<li><a href="#ITInput">Image+Text-to-Multiaudio Generation</a>
 		</ul>
 	</p>
 
@@ -61,7 +62,7 @@
 
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h2 id="VideoInput" style="text-align: center;">Video to Multiaudio Generation</h2>
+	<h2 id="VideoInput" style="text-align: center;">Video-to-Multiaudio Generation</h2>
 	<br>
         	<h4 id="emo" style="text-align: center;">Comparison with Other Methods</h4>
 	<br>
@@ -167,8 +168,8 @@
 			<table class="table table-hover pt-2" style="width: 100%; border-collapse: collapse;">
 			<thead>
 				<tr>
-					<th style="vertical-align : middle;text-align: center">Text Prompt</th>
-					<th style="vertical-align : middle;text-align: center">Affusion</th>
+					<th style="vertical-align : middle;text-align: center">Text Input</th>
+					<th style="vertical-align : middle;text-align: center">Auffusion</th>
 					<th style="vertical-align : middle;text-align: center">MMAudio</th>
 					<th style="vertical-align : middle;text-align: center">Ours</th>
 				</tr>
@@ -214,22 +215,22 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td style="vertical-align : middle;text-align:center;"><img src="resources/image-input/pic/seatree.jpg" alt="" height="150"><br></td>
+					<td style="vertical-align : middle;text-align:center;"><img src="resources/image-input/pic/seatree.jpg" alt="" width="200"><br></td>
 					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/see2sound/sea_tree_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
 					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/ssv2a/sea_tree_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
 					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/ours/sea_tree_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
 				</tr>
 				<tr>
-					<td style="vertical-align : middle;text-align:center;"><img src="resources/image-input/pic/tree.jpg" alt="" height="150"><br></td>
+					<td style="vertical-align : middle;text-align:center;"><img src="resources/image-input/pic/tree.jpg" alt="" width="200"><br></td>
 					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/see2sound/tree_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
 					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/ssv2a/tree_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
 					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/ours/tree_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
 				</tr>
 				<tr>
-					<td style="vertical-align : middle;text-align:center;"><img src="resources/image-input/pic/water.jpg" alt="" height="150"><br></td>
-					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/see2sound/water_tree_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/ssv2a/water_tree_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
-					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/ours/water_tree_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
+					<td style="vertical-align : middle;text-align:center;"><img src="resources/image-input/pic/water.jpg" alt="" width="200"><br></td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/see2sound/water_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/ssv2a/water_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
+					<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 200px;"><source src="resources/image-input/ours/water_output.wav" autoplay/>Your browser does not support the audio element.</audio><br> </td>
 				</tr>
 			</tbody>
 		</table>
@@ -253,58 +254,58 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/input/searainbow.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/input/searainbow.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					<td style="vertical-align: middle; text-align: center;">
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">The background music features a singer performing "And you let her go, oh~ oh~ oh~."</p>
 					</td>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/ours/searainbow_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/ours/searainbow_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 				</tr>
 				<tr>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/input/chengdu_guitar.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/input/chengdu_guitar.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					<td style="vertical-align: middle; text-align: center;">
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">繁华的商业街，街头艺人在弹唱歌曲《成都》，歌词是"让我感到为难的，是挣扎的自由"。行人在围观鼓掌欢呼，天空中放着烟花。</p>
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">On a bustling commercial street, a street performer sang "Chengdu," with the lyrics, "What troubles me is the struggle for freedom." Passersby gathered, clapping and cheering, while fireworks lit up the sky, blending with the vibrant scene below.</p>
 					</td>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/ours/chengdu_guitar_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/ours/chengdu_guitar_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 				</tr>
 				<tr>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/input/dapengyiri.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/input/dapengyiri.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					<td style="vertical-align: middle; text-align: center;">
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">李白有感而发，作诗"大鹏一日同风起,扶摇直上九万里"。</p>
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">Li Bai, inspired by his feelings, composed the verse: "A great roc soars with the wind in one day, ascending ninety thousand li."</p>
 					</td>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/ours/dapengyiri_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/ours/dapengyiri_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 				</tr>
 				<tr>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/input/niwonianshao.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/input/niwonianshao.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					<td style="vertical-align: middle; text-align: center;">
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">诗人带着不甘回忆道："你我年少相逢，都有凌云之志"。</p>
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">The poet recalls with regret: "When we met in our youth, we both had lofty ambitions."</p>
 					</td>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/ours/niwonianshao_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/ours/niwonianshao_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 				</tr>
 				<tr>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/input/dapengyiri.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/input/lianganyuanshen.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					<td style="vertical-align: middle; text-align: center;">
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">李白豪迈地抒发内心的情感"两岸猿声啼不住，轻舟已过万重山!"</p>
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">Li Bai boldly expresses his emotions: "Cries of apes echo on both banks, yet the light boat has already passed countless mountains!"</p>
 					</td>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/ours/dapengyiri_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/ours/lianganyuanshen_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 				</tr>
 				<tr>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/input/baixue.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/input/baixue.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					<td style="vertical-align: middle; text-align: center;">
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">The person in the scene sings, "Something is familiar, like a dream I can reach but not quite hold. I can sense you there, like a friend I've always known."</p>
 					</td>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/ours/baixue_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/ours/baixue_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 				</tr>
 				<tr>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/input/dapengyiri.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/input/man-motorcycle.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 					<td style="vertical-align: middle; text-align: center;">
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">背景是一段民谣弹唱，歌词是“星空洒落山间，映照你侧脸。夜风穿过窗沿，山丘沉睡，我们奔向旷野。”</p>
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">The background features a folk song, with lyrics: "The starlit sky falls over the mountains, illuminating your profile. The night wind flows through the window, the hills sleep, and we run toward the wilderness."</p>
 					</td>
-					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/combination-input/ours/dapengyiri_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 290px;"><source src="resources/combination-input/ours/man-motorcycle_output.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
 				</tr>
 			</tbody>
 		</table>
@@ -327,7 +328,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td style="vertical-align : middle;text-align:center;"><img src="resources/combination-input/input/autumn.png" alt="" height="150"><br></td>
+					<td style="vertical-align : middle;text-align:center;"><img src="resources/combination-input/input/autumn.png" alt="" width="200"><br></td>
 					<td style="vertical-align: middle; text-align: center;">
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">背景是一段歌曲"时间它不懂疲倦，带走一切只剩怀念。我站在落叶之间，看秋天悄悄走远。"</p>
 						<p style="text-align: left; margin: 0; font-size: 14px; line-height: 1.5;">The background features a song with the lyrics: "Time never tires, taking everything away and leaving only memories. I stand among fallen leaves, watching autumn quietly fade away."</p>
