@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="css/normalize.css">
 
-	<title>UniSpeaker</title>
+	<title>AudioGenie</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -26,52 +26,41 @@
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<div class="text-center">
-	<h2>Unispeaker: A unified speech generation model for multimodality-driven voice control </h2>
+	<h2>AudioGenie: A Training-Free Multi-Agent Framework for Diverse Multimodality-to-Multiaudio Generation</h2>
 
-      [<a href="">Paper</a>]
-	  [<a href="">Code</a>]
+        [<a href="">Paper</a>]
+        [<a href="">Dataset</a>]
 
         <p class="fst-italic mb-0">
-			<br>
+		<br>
 			Anonymous authors
 		<p></p>
-        <!-- </p>
-        <p><b>SpeechLab@Tongyi, Alibaba Group</b></p> -->
 	</div>
 	<p><b>Abstract:</b>
-<!--		We introduce FunAudioLLM, ....-->
-Recent advancements in zero-shot speech personalized generation have brought synthetic speech increasingly close to the realism of target speakers' recordings, yet multimodal voice creation remains on the rise. In various scenarios, individuals often seek to control and create voice characteristics through different voice description modalities. To address the limitations in both the versatility and performance of voice control found in previous methods, this paper introduces UniSpeaker, a unified multimodality-driven speech generation model that integrates face images, text descriptions, voice attribute descriptions, and reference speech for comprehensive voice control and creation. Specifically, we propose a unified voice aggregator based on KV-Former, applying soft contrastive loss to map diverse voice description modalities into a shared voice space, ensuring that the generated voice aligns more closely with the input descriptions. In addition, multimodal voice control is incorporated within a large-scale speech generation framework, employing self-distillation to enhance voice disentanglement. To evaluate multimodality-driven voice control, we build the first multimodality-based voice control (MVC) benchmark, focusing on voice suitability, voice diversity, and speech quality. UniSpeaker is evaluated across five tasks using the MVC benchmark, and the experimental results demonstrate that UniSpeaker outperforms previous modality-specific models.
+	Multimodality-to-Multiaudio (MM2MA) generation faces significant challenges in synthesizing diverse and contextually aligned audio types (e.g., sound effects, speech, music, and songs) from multimodal inputs (e.g., video, text, images), owing to the scarcity of high-quality paired datasets and the lack of robust multi-task learning frameworks. Recently, multi-agent system shows great potential in tackling the above issues. However, directly applying it to MM2MA task presents three critical challenges: (1) inadequate fine-grained understanding of multimodal inputs (especially for video), (2) the inability of single models to handle diverse audio events, and (3) the absence of self-correction mechanisms for reliable outputs. To this end, we propose <b>AudioGenie</b>, a novel training-free multi-agent system featuring a dual-layer architecture with a generation team and a supervisor team. For the generation team, a fine-grained task decomposition and an adaptive Mixture-of-Experts (MoE) collaborative entity are designed for dynamic model selection, and a trial-and-error iterative refinement module is designed for self-correction. The supervisor team ensures temporal-spatial consistency and verifies outputs through feedback loops. Moreover, we build MA-Bench, the first benchmark for MM2MA tasks, comprising 198 annotated videos with multi-type audios. Experiments demonstrate that our AudioGenie outperforms state-of-the-art (SOTA) methods across 12 metrics in 8 tasks. User study further validate the effectiveness of the proposed method in terms of quality, accuracy, alignment, and aesthetic.
+
+	<p><b>AudioGenie Framework</b></p>
 	<p style="text-align: center;">
-		<img src="pics/fig1.jpg" height="400" width="1024">
+		<img src="network.png" height="400" width="1024">
 	</p>
 
 
 	<p>
 	<b>Experiment</b>
-      <ul>
-      	<li><a href="#FaceTTS">Face-Driven Personalized Text-to-Speech</a>
-		<li><a href="#FaceVC">Face-Driven Voice Conversion</a>
-		<li><a href="#TextTTS">Text Description-Driven Personalized Text-to-Speech</a>
-		<li><a href="#TextVC">Text Description-Driven Voice Conversion</a>
-		<li><a href="#AVE">Attribute-Driven Voice Editing</a>
+        <ul>
+      	<li><a href="#VideoInput">Video-Input Multiaudio Generation</a>
+		<li><a href="#FaceVC">Text-Input Multiaudio Generation</a>
+		<li><a href="#TextTTS">Image-Input Multiaudio Generation</a>
+		<li><a href="#TextVC">Combination-Input Multiaudio Generation</a>
 		</ul>
 	</p>
 
-   <p>
-   <b>Discussion</b>
-      <ul>
-	    <li><a href="#FaceConsistency">Face-Driven Voice Consistency</a>
-		<li><a href="#FaceDiversity">More Face-Driven Voice Samples</a>
-		<li><a href="#TextDiversity">More Text-Driven Voice Samples</a>
-		<li><a href="#FaceText">Joint Face and Text-driven Voice Samples</a>
-		<li><a href="#FaceAttribute">Joint Face and Attribute-driven Voice Samples</a>
-	 </ul>
-	</p>
+
 </div>
 
 <!------ Application -------------------------->
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h2 id="FaceTTS" style="text-align: center;">Face-Driven Personalized Text-to-Speech</h2>
+	<h2 id="VideoInput" style="text-align: center;">Video-Input Multiaudio Generation</h2>
 	<p>
 		It is worth mentioning that the goal of face-driven speech synthesis is to generate voice characteristics that matches the face, rather than to synthesize the voice characteristics that is identical to that of the speaker.
 	</p>
