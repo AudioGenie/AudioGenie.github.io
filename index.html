@@ -50,13 +50,19 @@
 	<b>Experiment</b>
         <ul>
       	<li><a href="#VideoInput">Video-to-Multiaudio Generation</a>
-		<li><a href="#TextInput">Text-to-Multiaudio Generation</a>
-		<li><a href="#ImageInput">Image-to-Multiaudio Generation</a>
-		<li><a href="#VideoTextInput">Video+Text-to-Multiaudio Generation</a>
-		<li><a href="#ImageTextInput">Image+Text-to-Multiaudio Generation</a>
-		</ul>
+	<li><a href="#TextInput">Text-to-Multiaudio Generation</a>
+	<li><a href="#ImageInput">Image-to-Multiaudio Generation</a>
+	<li><a href="#VideoTextInput">Video+Text-to-Multiaudio Generation</a>
+	<li><a href="#ImageTextInput">Image+Text-to-Multiaudio Generation</a>
+	</ul>
 	</p>
-
+	<p>
+	<b>Discussion</b>
+        <ul>
+      	<li><a href="#comllm">Rebuttal Supplement: 1. Comparison with Different MLLMs</a>
+	<li><a href="#publicdata">Rebuttal Supplement: 2. Results on VGGSound and V2M dataset</a>
+	</ul>
+	</p>
 
 </div>
 
@@ -340,8 +346,65 @@
 		</div>
 </div>
 
+	
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h2 id="comllm" style="text-align: center;">Rebuttal Supplement: 1. Comparison with Different MLLMs</h2>
+	<p> </p>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2" style="width: 100%; border-collapse: collapse;">
+				<thead>
+				<tr>
+					<th style="vertical-align : middle;text-align: center">Qwen2.5-VL</th>
+					<th style="vertical-align : middle;text-align: center">GPT-4o</th>
+					<th style="vertical-align : middle;text-align: center">Gemini 2.5 Pro</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 330px;"><source src="resources/llm-com/ours_qwen/firemountain_qwen.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 330px;"><source src="resources/llm-com/ours_gpt/firemountain_gpt.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 330px;"><source src="resources/llm-com/ours_gemini/firemountain_gemini.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					</tr>
+					<tr>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 330px;"><source src="resources/llm-com/ours_qwen/cars_qwen_scale.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 330px;"><source src="resources/llm-com/ours_gpt/cars_gpt_scale.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 330px;"><source src="resources/llm-com/ours_gemini/cars_gemini_scale.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					</tr>
+					<tr>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 330px;"><source src="resources/llm-com/ours_qwen/bees_qwen.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 330px;"><source src="resources/llm-com/ours_gpt/bees_gpt.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 330px;"><source src="resources/llm-com/ours_gemini/bees_gemini.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+</div>
 
+	
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h2 id="publicdata" style="text-align: center;">Rebuttal Supplement: 2. Results on VGGSound and V2M dataset</h2>
+	<p> </p>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2" style="width: 100%; border-collapse: collapse;">
+				<tbody>
+					<tr>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/public-data/ours/eatchich_ours.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/public-data/ours/comcars_output_ours.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/public-data/ours/manstage_output_ours.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/public-data/ours/policer_ours.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					</tr>
+					<tr>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/public-data/ours/huaban_ours.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/public-data/ours/carprint_ours.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/public-data/ours/cityroad_output_ours.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+						<td style="vertical-align: middle; text-align:center;"><video controls="controls" style="width: 250px;"><source src="resources/public-data/ours/seaboat_output_ours.mp4" type="video/mp4"> Your browser does not support the video element.</video><br></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+</div>
 
+	
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<h2 style="text-align: center;">Disclaimer</h2>
 	<p>The content provided above is for academic purposes only and is intended to demonstrate technical capabilities. If you have any concerns, please contact us.</p>
