@@ -34,12 +34,11 @@
 
         <p class="fst-italic mb-0">
 		<br>
-			Anonymous authors
+			Yan Rong, Jinting Wang, Shan Yang, Guangzhi Lei, Li Liu
 		<p></p>
 	</div>
 	<p><b>Abstract:</b>
-	Multimodality-to-Multiaudio (MM2MA) generation faces significant challenges in synthesizing diverse and contextually aligned audio types (e.g., sound effects, speech, music, and songs) from multimodal inputs (e.g., video, text, images), owing to the scarcity of high-quality paired datasets and the lack of robust multi-task learning frameworks. Recently, multi-agent system shows great potential in tackling the above issues. However, directly applying it to MM2MA task presents three critical challenges: (1) inadequate fine-grained understanding of multimodal inputs (especially for video), (2) the inability of single models to handle diverse audio events, and (3) the absence of self-correction mechanisms for reliable outputs. To this end, we propose <b>AudioGenie</b>, a novel training-free multi-agent system featuring a dual-layer architecture with a generation team and a supervisor team. For the generation team, a fine-grained task decomposition and an adaptive Mixture-of-Experts (MoE) collaborative entity are designed for dynamic model selection, and a trial-and-error iterative refinement module is designed for self-correction. The supervisor team ensures temporal-spatial consistency and verifies outputs through feedback loops. Moreover, we build MA-Bench, the first benchmark for MM2MA tasks, comprising 198 annotated videos with multi-type audios. Experiments demonstrate that our AudioGenie outperforms state-of-the-art (SOTA) methods across 9 metrics in 8 tasks. User study further validate the effectiveness of the proposed method in terms of quality, accuracy, alignment, and aesthetic.
-
+	Multimodality-to-Multiaudio (MM2MA) generation faces significant challenges in synthesizing diverse and contextually aligned audio types (e.g., sound effects, speech, music, and songs) from multimodal inputs (e.g., video, text, images), owing to the scarcity of high-quality paired datasets and the lack of robust multi-task learning frameworks. Recently, multi-agent system shows great potential in tackling the above issues. However, directly applying it to MM2MA task presents three critical challenges: (1) inadequate fine-grained understanding of multimodal inputs (especially for video), (2) the inability of single models to handle diverse audio events, and (3) the absence of self-correction mechanisms for reliable outputs. To this end, we propose <b>AudioGenie</b>, a novel training-free multi-agent system featuring a dual-layer architecture with a generation team and a supervisor team. For the generation team, a fine-grained task decomposition and an adaptive Mixture-of-Experts (MoE) collaborative entity are designed for detailed comprehensive multimodal understanding and dynamic model selection, and a trial-and-error iterative refinement module is designed for self-correction. The supervisor team ensures temporal-spatial consistency and verifies outputs through feedback loops. Moreover, we build MA-Bench, the first benchmark for MM2MA tasks, comprising 198 annotated videos with multi-type audios. Experiments demonstrate that our AudioGenie achieves state-of-the-art (SOTA) or comparable performance across 9 metrics in 8 tasks. User study further validates the effectiveness of our method in terms of quality, accuracy, alignment, and aesthetic.
 	<p><b>AudioGenie Framework</b></p>
 	<p style="text-align: center;">
 		<img src="network.png" height="400" width="1024">
@@ -59,8 +58,8 @@
 	<p>
 	<b>Discussion</b>
         <ul>
-      	<li><a href="#comllm">Rebuttal Supplement: 1. Comparison with Different MLLMs</a>
-	<li><a href="#publicdata">Rebuttal Supplement: 2. Results on Public Datasets (e.g., VGGSound and V2M)</a>
+      	<li><a href="#comllm">Comparison with Different MLLMs</a>
+	<li><a href="#publicdata">Results on Public Datasets (e.g., VGGSound and V2M)</a>
 	</ul>
 	</p>
 
@@ -348,7 +347,7 @@
 
 	
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h2 id="comllm" style="text-align: center;">Rebuttal Supplement: 1. Comparison with Different MLLMs</h2>
+	<h2 id="comllm" style="text-align: center;">Comparison with Different MLLMs</h2>
 	<p> </p>
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2" style="width: 100%; border-collapse: collapse;">
@@ -385,7 +384,7 @@
 
 	
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h2 id="publicdata" style="text-align: center;">Rebuttal Supplement: 2. Results on Public Datasets (e.g., VGGSound and V2M)</h2>
+	<h2 id="publicdata" style="text-align: center;">Results on Public Datasets (e.g., VGGSound and V2M)</h2>
 	<p> </p>
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2" style="width: 100%; border-collapse: collapse;">
